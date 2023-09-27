@@ -1,8 +1,8 @@
-"use client";
+'use client';
 
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useState } from 'react';
 
-export type Theme = "light" | "dark";
+export type Theme = 'light' | 'dark';
 
 type ThemeContextProviderProps = {
   children: React.ReactNode;
@@ -16,20 +16,20 @@ export type ThemeContextType = {
 const ThemeContext = createContext<ThemeContextType | null>(null);
 
 export const ThemeContextProvider = ({
-  children,
+  children
 }: ThemeContextProviderProps) => {
-  const [theme, setTheme] = useState<Theme>("light");
+  const [theme, setTheme] = useState<Theme>('light');
 
   // Simple toggle function to switch states
   const toggleTheme = () => {
-    if (theme === "light") {
-      setTheme("dark");
-      localStorage.setItem("theme", "dark");
-      document.documentElement.classList.add("dark");
+    if (theme === 'light') {
+      setTheme('dark');
+      localStorage.setItem('theme', 'dark');
+      document.documentElement.classList.add('dark');
     } else {
-      setTheme("light");
-      window.localStorage.setItem("theme", "light");
-      document.documentElement.classList.remove("dark");
+      setTheme('light');
+      window.localStorage.setItem('theme', 'light');
+      document.documentElement.classList.remove('dark');
     }
   };
 
@@ -44,7 +44,7 @@ export const useTheme = () => {
   const context = useContext(ThemeContext);
 
   if (context === null) {
-    throw new Error("useTheme must be used within a ThemeContextProvider");
+    throw new Error('useTheme must be used within a ThemeContextProvider');
   }
 
   return context;
