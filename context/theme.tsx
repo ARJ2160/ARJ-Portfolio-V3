@@ -40,4 +40,12 @@ export const ThemeContextProvider = ({
   );
 };
 
-export const useTheme = () => useContext(ThemeContext);
+export const useTheme = () => {
+  const context = useContext(ThemeContext);
+
+  if (context === null) {
+    throw new Error("useTheme must be used within a ThemeContextProvider");
+  }
+
+  return context;
+};
