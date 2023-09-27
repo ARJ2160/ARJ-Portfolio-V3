@@ -1,9 +1,9 @@
 import { ThemeContextProvider } from "@/context/theme";
 import "./globals.css";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+// import { Inter } from "next/font/google";
 
-const inter = Inter({ subsets: ["latin"] });
+// const inter = Inter({ subsets: ["latin"], preload: true });
 
 export const metadata: Metadata = {
   title: "Atharva J | Portfolio Website",
@@ -17,7 +17,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="!scroll-smooth">
-      <body className={inter.className}>
+      <body>
         <ThemeContextProvider>{children}</ThemeContextProvider>
       </body>
     </html>
