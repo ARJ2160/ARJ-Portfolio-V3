@@ -13,10 +13,7 @@
 //         <meta property="og:type" content="website" />
 //         <meta property="og:site_name" content="ARJs Portfolio V3" />
 //         <meta property="og:title" content="ARJs Portfolio V3" />
-//         <meta itemProp="name" content="ARJs Portfolio V3" />
-//         <meta name="author" content="Atharva Joshi" />
 //         <meta name="language" content="en-us" />
-//         <meta name="description" content="ARJs Portfolio Website Version 3" />
 //         <meta name="theme-color" content="#3399FF" />
 //         <meta charSet="utf-8" />
 //         <meta

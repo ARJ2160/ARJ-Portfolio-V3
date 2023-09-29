@@ -3,7 +3,13 @@ module.exports = {
     browser: true,
     es2021: true
   },
-  extends: ['standard-with-typescript', 'plugin:react/recommended', 'prettier'],
+  extends: [
+    'eslint:recommended',
+    'next',
+    'standard-with-typescript',
+    'prettier',
+    'plugin:react/recommended'
+  ],
   overrides: [
     {
       env: {
@@ -20,5 +26,7 @@ module.exports = {
     sourceType: 'module'
   },
   plugins: ['react'],
-  rules: {}
+  rules: {
+    semi: [2, 'always']
+  }
 };

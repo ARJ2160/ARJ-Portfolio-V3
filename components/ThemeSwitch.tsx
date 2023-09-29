@@ -1,9 +1,10 @@
 'use client';
-import { ThemeContextType, useTheme } from '@/context/theme';
+import { useTheme } from '@/context/theme';
+import { type ThemeContextType } from '@/types/types';
 import React from 'react';
 import { BsMoon, BsSun } from 'react-icons/bs';
 
-const ThemeSwitch = () => {
+const ThemeSwitch = (): JSX.Element => {
   const { theme, toggleTheme }: ThemeContextType = useTheme();
   return (
     <button

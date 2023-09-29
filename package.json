@@ -32,6 +32,7 @@
     "autoprefixer": "latest",
     "eslint": "^8.0.1",
     "eslint-config-next": "latest",
+    "eslint-config-prettier": "^9.0.0",
     "framer-motion": "^10.16.4",
     "husky": "^8.0.0",
     "postcss": "latest",
