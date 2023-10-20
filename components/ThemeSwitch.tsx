@@ -4,7 +4,7 @@ import { type ThemeContextType } from '@/types/types';
 import React from 'react';
 import { BsMoon, BsSun } from 'react-icons/bs';
 
-const ThemeSwitch = (): JSX.Element => {
+export const ThemeSwitch = (): JSX.Element => {
   const { theme, toggleTheme }: ThemeContextType = useTheme();
   return (
     <button
@@ -15,5 +15,3 @@ const ThemeSwitch = (): JSX.Element => {
     </button>
   );
 };
-
-export default ThemeSwitch;

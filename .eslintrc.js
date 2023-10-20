@@ -27,6 +27,7 @@ module.exports = {
   },
   plugins: ['react'],
   rules: {
-    semi: [2, 'always']
+    semi: [2, 'always'],
+    'react/no-unescaped-entities': 0
   }
 };
