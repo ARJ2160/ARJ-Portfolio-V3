@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Apercu Pro';
+  src: url('fonts/ApercuPro-Medium.eot');
+  src:
+    local('Apercu Pro Medium'),
+    local('ApercuPro-Medium'),
+    url('fonts/ApercuPro-Medium.eot?#iefix') format('embedded-opentype'),
+    url('fonts/ApercuPro-Medium.woff2') format('woff2'),
+    url('fonts/ApercuPro-Medium.woff') format('woff'),
+    url('fonts/ApercuPro-Medium.ttf') format('truetype');
+  font-style: normal;
+  font-display: swap;
+}
+* {
+  font-family:
+    Apercu Pro,
+    sans-serif;
+}
+
+html {
+  --line-color: #e5e7eb;
+}
+
+html.dark {
+  --line-color: rgba(255, 255, 255, 0.2);
+}
+
+.borderBlack {
+  @apply border border-black/10;
+}
+
+.contact-btns {
+  @apply bg-white p-4 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer dark:bg-white/10 dark:text-white/60
+  /* text-gray-700 hover:text-gray-950 */;
+}
