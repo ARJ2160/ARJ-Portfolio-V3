@@ -33,12 +33,15 @@ export const Experience = (): React.ReactElement => {
               <div className='bg-white dark:bg-white/10 p-6 rounded-lg shadow-lg border border-black/10 dark:border-white/20 hover:shadow-xl dark:hover:shadow-2xl transition-shadow'>
                 <div className='flex items-center gap-2 mb-2'>
                   <div className='text-2xl'>{item.icon}</div>
-                  <h3 className='font-semibold text-lg'>{item.title}</h3>
+                  <h3 className='font-semibold text-lg'>{item.company}</h3>
                 </div>
-                <p className='text-sm text-gray-600 dark:text-gray-400 mb-2'>
+                <p className='text-sm text-gray-700 dark:text-white/70 mb-2'>
+                  Designation - {item.designation}
+                </p>
+                <p className='text-sm text-gray-700 dark:text-white/70 mb-2'>
                   {item.location}
                 </p>
-                <p className='text-sm text-gray-500 dark:text-gray-500 mb-3 font-medium'>
+                <p className='text-sm text-gray-700 dark:text-white/70 mb-3 font-medium'>
                   {item.date}
                 </p>
                 <p className='text-gray-700 dark:text-white/70 leading-relaxed'>

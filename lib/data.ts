@@ -23,8 +23,8 @@ import {
   Apollo,
   Storybook,
   Vite,
-  Jenkins,
-  Stripe,
+  // Jenkins,
+  // Stripe,
   MITScratchClone,
   BlogWebsite,
   MiltonFramer,
@@ -61,32 +61,36 @@ export const links = [
 
 export const experiencesData: Experience[] = [
   {
-    title: 'Associate React (MERN) Developer',
+    company: 'Apptware',
     location: 'Pune, India',
+    designation: 'Associate React (MERN) Developer',
     description:
       'Developed full-stack web applications using MongoDB, Express.js, React, and Node.js. Built responsive user interfaces and RESTful APIs.',
     icon: React.createElement(FaReact),
     date: `February 2022 - present  (${new Date().getFullYear() - 2022}  Years)`
   },
   {
-    title: 'Quantum Hunts',
+    company: 'Quantum Hunts',
     location: 'Pune, India',
+    designation: 'React Developer',
     description:
       'Worked on React-based projects with focus on user experience and modern UI/UX principles. Utilized Next.js for performance optimization.',
     icon: React.createElement(FaReact),
     date: 'July 2021 - October 2023 (4 Months)'
   },
   {
-    title: 'Samtej Industries LLP',
+    company: 'Samtej Industries LLP',
     location: 'India',
+    designation: 'React Developer',
     description:
       'Focused on software development, data structures, algorithms, and web technologies.',
     icon: React.createElement(FaReact),
     date: 'October 2021 - December 2021 (3 Months)'
   },
   {
-    title: 'Indian Society of Technical Education',
+    company: 'Indian Society of Technical Education',
     location: 'Pune, India',
+    designation: 'React Developer & Web UI Content Writer',
     description:
       'Worked on React-based projects with focus on user experience and modern UI/UX principles. Utilized Next.js for performance optimization.',
     icon: React.createElement(FaReact),
@@ -151,19 +155,19 @@ export const skillsData: Skill[] = [
   { name: 'Express JS', icon: Express },
   { name: 'Redux Toolkit', icon: Redux },
   { name: 'Zustand', icon: Zustand },
-  { name: 'Framer Motion', icon: Framer },
   { name: 'MongoDB', icon: MongoDB },
-  { name: 'Material UI', icon: MaterialUI },
-  { name: 'Tailwind CSS', icon: Tailwind },
-  { name: 'Git', icon: GitHub },
-  { name: 'HTML', icon: HTML5 },
-  { name: 'CSS', icon: CSS3 },
-  { name: 'Docker', icon: Docker },
-  { name: 'Bootstrap', icon: Bootstrap },
   { name: 'GraphQL', icon: GraphQL },
   { name: 'Apollo', icon: Apollo },
-  { name: 'Storybook', icon: Storybook },
+  { name: 'Docker', icon: Docker },
+  { name: 'Git', icon: GitHub },
   { name: 'Vite', icon: Vite },
-  { name: 'Jenkins', icon: Jenkins },
-  { name: 'Stripe', icon: Stripe }
+  { name: 'Storybook', icon: Storybook },
+  { name: 'Framer Motion', icon: Framer },
+  { name: 'Material UI', icon: MaterialUI },
+  { name: 'Tailwind CSS', icon: Tailwind },
+  { name: 'Bootstrap', icon: Bootstrap },
+  { name: 'HTML', icon: HTML5 },
+  { name: 'CSS', icon: CSS3 }
+  // { name: 'Jenkins', icon: Jenkins },
+  // { name: 'Stripe', icon: Stripe }
 ];

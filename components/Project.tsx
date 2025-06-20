@@ -72,9 +72,9 @@ export const Project = ({
 
         <div className='p-6 flex flex-col flex-grow'>
           <div className='flex-grow'>
-            <h3 className='text-xl font-semibold text-gray-900 dark:text-white mb-3 line-clamp-2 group-hover:text-gray-700 dark:group-hover:text-gray-200 transition-colors'>
+            <div className='text-xl font-bold text-slate-900 dark:text-white mb-3 line-clamp-2 group-hover:text-gray-700 dark:group-hover:text-gray-200 transition-colors'>
               {title}
-            </h3>
+            </div>
             <p className='text-gray-600 dark:text-white/70 leading-relaxed text-sm line-clamp-3 mb-4'>
               {description}
             </p>

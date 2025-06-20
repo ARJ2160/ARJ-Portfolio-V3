@@ -19,8 +19,9 @@ export type Project = {
 };
 
 export type Experience = {
-  title: string;
+  company: string;
   location: string;
+  designation: string;
   description: string;
   icon: React.ReactNode;
   date: string;

@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import React from 'react';
-import pic from '../images/Atharva_Joshi.jpg';
+import pic from '../images/Atharva_Joshi.webp';
 import Link from 'next/link';
 import { BsArrowRight, BsLinkedin } from 'react-icons/bs';
 import { HiDownload } from 'react-icons/hi';
@@ -45,10 +45,20 @@ export const Hero = (): React.ReactElement => {
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <span className='font-bold'>Hello, I'm Atharva.</span> I'm a{' '}
-        <span className='font-bold'>MERN Stack developer.</span>I build stuff
-        for the web. My focus is{' '}
-        <span className='underline'>React (Next.js)</span>.
+        <span className='font-bold'>Hey there! I'm Atharva 👋.</span> A{' '}
+        <span className='font-bold text-blue-600 dark:text-blue-400'>
+          full-stack wizard
+        </span>{' '}
+        who turns ideas into digital reality. <br />I craft seamless web
+        experiences with the{' '}
+        <span className='bg-gradient-to-r from-green-400 to-blue-500 bg-clip-text text-transparent font-bold'>
+          MERN stack
+        </span>
+        , specializing in{' '}
+        <span className='underline decoration-wavy decoration-blue-500'>
+          React & Next.js magic
+        </span>{' '}
+        ✨
       </motion.h1>
       <motion.div
         className='flex flex-col sm:flex-row items-center justify-center gap-2 px-4 text-lg font-medium'
@@ -84,6 +94,7 @@ export const Hero = (): React.ReactElement => {
           href='https://www.linkedin.com/in/arj2160/'
           target='_blank'
           rel='noreferrer'
+          aria-label='Visit my LinkedIn profile'
         >
           <BsLinkedin />
         </a>
@@ -93,6 +104,7 @@ export const Hero = (): React.ReactElement => {
           href='https://github.com/ARJ2160'
           target='_blank'
           rel='noreferrer'
+          aria-label='Visit my GitHub profile'
         >
           <FaGithubSquare />
         </a>
