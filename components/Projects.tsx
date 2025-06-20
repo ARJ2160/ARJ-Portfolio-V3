@@ -11,9 +11,9 @@ export const Projects = (): React.ReactElement => {
       <SectionHeading>My projects</SectionHeading>
       <div className='grid gap-6 md:gap-8 grid-cols-1 lg:grid-cols-2 max-w-7xl mx-auto px-4'>
         {projectsData.map((project, index) => (
-          <React.Fragment key={index}>
+          <div className='relative' key={index}>
             <Project {...project} />
-          </React.Fragment>
+          </div>
         ))}
       </div>
     </section>

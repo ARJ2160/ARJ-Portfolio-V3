@@ -28,7 +28,8 @@ import {
   MITScratchClone,
   BlogWebsite,
   MiltonFramer,
-  Spotify
+  Spotify,
+  Lusion
 } from './images';
 
 export const links = [
@@ -135,7 +136,7 @@ export const projectsData: Project[] = [
     description:
       'Developed an emulation of the "Lusion" website using React and Tailwind. Integrated a cart functionality with Stripe API for payments',
     tags: ['React JS', 'Tailwind CSS', 'Stripe API'],
-    image: Spotify.src,
+    image: Lusion.src,
     githubUrl: 'https://github.com/ARJ2160/Tailwind-Lusion',
     liveUrl: 'https://tailwind-lusion.vercel.app/'
   }
