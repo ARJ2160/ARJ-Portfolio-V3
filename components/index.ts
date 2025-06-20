@@ -1,3 +1,14 @@
-export { ThemeSwitch } from './ThemeSwitch';
 export { Hero } from './Hero';
 export { SectionDivider } from './SectionDivider';
+export { ThemeSwitch } from './ThemeSwitch';
+export { About } from './About';
+export { Projects } from './Projects';
+export { Project } from './Project';
+export { Skills } from './Skills';
+export { Experience } from './Experience';
+export { Contact } from './Contact';
+export { Header } from './Header';
+export { SectionHeading } from './SectionHeading';
+export { SocialMedia } from './SocialMedia';
+export { Chips } from './Chips';
+export { SplitText } from './SplitText';

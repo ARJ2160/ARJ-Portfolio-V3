@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import React from 'react';
-import pic from '../images/Atharva_Joshi.webp';
+import pic from '../images/Atharva_Joshi.jpg';
 import Link from 'next/link';
 import { BsArrowRight, BsLinkedin } from 'react-icons/bs';
 import { HiDownload } from 'react-icons/hi';
@@ -12,8 +12,8 @@ import { FaGithubSquare } from 'react-icons/fa';
 export const Hero = (): JSX.Element => {
   return (
     <section
-      id='hero'
-      className='mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-[100rem]'
+      id='home'
+      className='mb-28 max-w-[50rem] text-center sm:mb-0 scroll-mt-28 pt-28'
     >
       <div className='flex items-center justify-center'>
         <div className='relative'>
@@ -24,29 +24,30 @@ export const Hero = (): JSX.Element => {
               type: 'tween',
               duration: 0.2
             }}
-            className='items-center'
+            className='items-center mt-10 mb-20'
           >
-            <Image
-              src={pic}
-              alt='Atharva J Portrait'
-              width='192'
-              height='192'
-              quality='95'
-              priority={true}
-              className='h-24 w-24 rounded-full object-cover border-[0.35rem] border-white shadow-xl'
-            />
+            <div className='relative w-24 h-24 flex items-center justify-center'>
+              <Image
+                src={pic}
+                alt='Atharva J Portrait'
+                width={192}
+                height={192}
+                quality='95'
+                priority
+                className='h-48 min-w-[192px] rounded-full object-cover border-[0.35rem] border-white shadow-xl'
+              />
+            </div>
           </motion.div>
         </div>
       </div>
-      <motion.h1></motion.h1>
       <motion.h1
         className='mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-4xl'
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <span className='font-bold'>Hello, I'm Atharva.</span> I'm a
+        <span className='font-bold'>Hello, I'm Atharva.</span> I'm a{' '}
         <span className='font-bold'>MERN Stack developer.</span>I build stuff
-        for the web. My focus is
+        for the web. My focus is{' '}
         <span className='underline'>React (Next.js)</span>.
       </motion.h1>
       <motion.div
@@ -59,7 +60,7 @@ export const Hero = (): JSX.Element => {
       >
         <Link
           href='#contact'
-          className='group bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition'
+          className='group bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition border border-black/10 dark:border-white/20 shadow-lg hover:shadow-xl dark:hover:shadow-2xl'
           onClick={() => {
             // setActiveSection('Contact');
             // setTimeOfLastClick(Date.now());
@@ -70,7 +71,7 @@ export const Hero = (): JSX.Element => {
         </Link>
 
         <a
-          className='group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10'
+          className='group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer border border-black/10 dark:bg-white/10 dark:border-white/20 shadow-lg hover:shadow-xl dark:hover:shadow-2xl'
           href='/CV.pdf'
           download
         >
@@ -79,7 +80,7 @@ export const Hero = (): JSX.Element => {
         </a>
 
         <a
-          className='borderBlack contact-btns'
+          className='bg-white p-4 text-gray-700 hover:text-gray-950 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer border border-black/10 dark:bg-white/10 dark:text-white/60 dark:border-white/20 shadow-lg hover:shadow-xl dark:hover:shadow-2xl'
           href='https://linkedin.com'
           target='_blank'
           rel='noreferrer'
@@ -88,7 +89,7 @@ export const Hero = (): JSX.Element => {
         </a>
 
         <a
-          className='borderBlack contact-btns text-[1.35rem]'
+          className='bg-white p-4 text-gray-700 hover:text-gray-950 flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer border border-black/10 dark:bg-white/10 dark:text-white/60 dark:border-white/20 shadow-lg hover:shadow-xl dark:hover:shadow-2xl'
           href='https://github.com'
           target='_blank'
           rel='noreferrer'

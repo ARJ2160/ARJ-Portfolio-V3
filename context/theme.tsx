@@ -5,7 +5,7 @@ import {
   ThemeContextProviderProps,
   ThemeContextType
 } from '@/types/types';
-import { createContext, useContext, useState } from 'react';
+import { createContext, useContext, useState, useEffect } from 'react';
 
 const ThemeContext = createContext<ThemeContextType | null>(null);
 
@@ -14,11 +14,27 @@ export const ThemeContextProvider = ({
 }: ThemeContextProviderProps) => {
   const [theme, setTheme] = useState<Theme>('light');
 
+  // Initialize theme from localStorage on mount
+  useEffect(() => {
+    const localTheme = window.localStorage.getItem('theme') as Theme | null;
+
+    if (localTheme) {
+      setTheme(localTheme);
+      if (localTheme === 'dark') {
+        document.documentElement.classList.add('dark');
+      }
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      setTheme('dark');
+      document.documentElement.classList.add('dark');
+    }
+  }, []);
+
   // Simple toggle function to switch states
   const toggleTheme = () => {
+    console.log('toggleTheme', theme);
     if (theme === 'light') {
       setTheme('dark');
-      localStorage.setItem('theme', 'dark');
+      window.localStorage.setItem('theme', 'dark');
       document.documentElement.classList.add('dark');
     } else {
       setTheme('light');
