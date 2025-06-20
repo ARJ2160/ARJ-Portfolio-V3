@@ -20,7 +20,7 @@ const fadeInAnimationVariants = {
   })
 };
 
-export const Skills = (): JSX.Element => {
+export const Skills = (): React.ReactElement => {
   return (
     <section
       id='skills'

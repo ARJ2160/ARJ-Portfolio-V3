@@ -4,7 +4,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { SectionHeading } from './SectionHeading';
 
-export const About = (): JSX.Element => {
+export const About = (): React.ReactElement => {
   return (
     <motion.section
       className='mb-28 max-w-[45rem] text-center leading-8 sm:mb-40 scroll-mt-28'

@@ -8,6 +8,6 @@ interface ISocialMedia {
 export const SocialMedia = ({
   children,
   className = ''
-}: ISocialMedia): JSX.Element => {
+}: ISocialMedia): React.ReactElement => {
   return <div className={`social-media ${className}`}>{children}</div>;
 };

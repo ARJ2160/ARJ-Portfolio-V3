@@ -9,7 +9,7 @@ import { BsArrowRight, BsLinkedin } from 'react-icons/bs';
 import { HiDownload } from 'react-icons/hi';
 import { FaGithubSquare } from 'react-icons/fa';
 
-export const Hero = (): JSX.Element => {
+export const Hero = (): React.ReactElement => {
   return (
     <section
       id='home'

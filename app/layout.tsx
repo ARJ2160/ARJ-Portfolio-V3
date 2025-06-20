@@ -3,6 +3,7 @@ import React from 'react';
 import '../styles/globals.css';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
+import { JSX } from 'react';
 
 const inter = Inter({ subsets: ['latin'], preload: true });
 
@@ -33,7 +34,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }): JSX.Element {
   return (
-    <html lang='en' className='!scroll-smooth'>
+    <html lang='en' className='!scroll-smooth dark'>
       <body
         className={`${inter.className} bg-gray-50 text-gray-950 dark:bg-gray-900 dark:text-gray-50 dark:text-opacity-90`}
       >

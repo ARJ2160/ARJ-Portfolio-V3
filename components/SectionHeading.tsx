@@ -6,7 +6,7 @@ interface SectionHeadingProps {
 
 export const SectionHeading = ({
   children
-}: SectionHeadingProps): JSX.Element => {
+}: SectionHeadingProps): React.ReactElement => {
   return (
     <h2 className='text-6xl font-medium capitalize mb-8 text-center'>
       {children}

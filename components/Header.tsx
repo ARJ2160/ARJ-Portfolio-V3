@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import { links } from '@/lib/data';
 import Link from 'next/link';
 
-export const Header = (): JSX.Element => {
+export const Header = (): React.ReactElement => {
   return (
     <header className='z-[999] relative'>
       <motion.div

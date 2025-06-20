@@ -98,7 +98,7 @@ export const projectsData: Project[] = [
     title: 'MIT Scratch Clone',
     description:
       'Developed a clone of the MIT Scratch website with React flow nodes in place of blocks',
-    tags: ['React', 'Node.js', 'React Flow', 'Custom Events'],
+    tags: ['React JS', 'Node.js', 'React Flow', 'Custom Events'],
     image: MITScratchClone.src,
     githubUrl: 'https://github.com/ARJ2160/MIT-Scratch-Clone',
     liveUrl: 'https://cool-twilight-ce65a1.netlify.app/'
@@ -125,10 +125,19 @@ export const projectsData: Project[] = [
     title: 'NEXT JS Spotify Clone',
     description:
       'Created a clone of the Spotify website with NEXT JS, Tailwind CSS, NEXT Auth, and Spotify API',
-    tags: ['NEXT JS', 'React', 'Next Auth', 'Tailwind CSS', 'Spotify API'],
+    tags: ['NEXT JS', 'React JS', 'Next Auth', 'Tailwind CSS', 'Spotify API'],
     image: Spotify.src,
     githubUrl: 'https://github.com/ARJ2160/Next-Spotify-Clone',
     liveUrl: 'https://next-spotify-clone-xi.vercel.app/'
+  },
+  {
+    title: 'Lusion React + Tailwind Clone',
+    description:
+      'Developed an emulation of the "Lusion" website using React and Tailwind. Integrated a cart functionality with Stripe API for payments',
+    tags: ['React JS', 'Tailwind CSS', 'Stripe API'],
+    image: Spotify.src,
+    githubUrl: 'https://github.com/ARJ2160/Tailwind-Lusion',
+    liveUrl: 'https://tailwind-lusion.vercel.app/'
   }
 ];
 

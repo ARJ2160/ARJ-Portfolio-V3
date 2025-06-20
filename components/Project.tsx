@@ -13,13 +13,13 @@ export const Project = ({
   image,
   githubUrl,
   liveUrl
-}: ProjectType): JSX.Element => {
+}: ProjectType): React.ReactElement => {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ['0 1', '1.33 1']
   });
-  const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
+  const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.9, 1]);
   const opacityProgress = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
 
   return (
@@ -29,68 +29,98 @@ export const Project = ({
         scale: scaleProgress,
         opacity: opacityProgress
       }}
-      className='group mb-3 sm:mb-8 last:mb-0'
+      className='group w-full'
     >
-      <section className='bg-gray-100 max-w-[42rem] border border-black/10 rounded-lg overflow-hidden sm:pr-8 relative sm:h-[20rem] hover:bg-gray-200 transition sm:group-even:pl-8 dark:text-white dark:bg-white/10 dark:hover:bg-white/20 dark:border-white/20 shadow-sm dark:shadow-lg'>
-        <div className='pt-4 pb-7 px-5 sm:pl-10 sm:pr-2 sm:pt-10 sm:max-w-[50%] flex flex-col h-full sm:group-even:ml-[18rem]'>
-          <h3 className='text-2xl font-semibold'>{title}</h3>
-          <p className='mt-2 leading-relaxed text-gray-700 dark:text-white/70'>
-            {description}
-          </p>
-          <ul className='flex flex-wrap mt-4 gap-2 sm:mt-auto'>
+      <div className='bg-gray-100 border border-black/10 rounded-2xl overflow-hidden hover:bg-gray-200 transition-all duration-300 hover:shadow-lg hover:shadow-black/5 dark:bg-white/10 dark:hover:bg-white/20 dark:border-white/20 dark:shadow-lg dark:hover:shadow-white/5 h-full flex flex-col'>
+        <div className='relative overflow-hidden bg-gray-50 dark:bg-white/5'>
+          <div className='aspect-video relative'>
+            <Image
+              src={image}
+              alt={`${title} project screenshot`}
+              fill
+              className='object-cover object-top transition-transform duration-300 group-hover:scale-105'
+              sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
+            />
+            <div className='absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300' />
+          </div>
+
+          <div className='absolute top-4 right-4 flex gap-2 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0'>
+            {githubUrl && (
+              <a
+                className='bg-white/90 hover:bg-white p-2.5 text-gray-700 hover:text-gray-950 flex items-center justify-center rounded-full focus:scale-110 hover:scale-110 active:scale-95 transition-all cursor-pointer shadow-lg dark:bg-black/80 dark:hover:bg-black/90 dark:text-white/80 dark:hover:text-white backdrop-blur-sm'
+                href={githubUrl}
+                target='_blank'
+                rel='noopener noreferrer'
+                aria-label={`View ${title} on GitHub`}
+              >
+                <FaGithubSquare className='w-4 h-4' />
+              </a>
+            )}
+            {liveUrl && (
+              <a
+                className='bg-white/90 hover:bg-white p-2.5 text-gray-700 hover:text-gray-950 flex items-center justify-center rounded-full focus:scale-110 hover:scale-110 active:scale-95 transition-all cursor-pointer shadow-lg dark:bg-black/80 dark:hover:bg-black/90 dark:text-white/80 dark:hover:text-white backdrop-blur-sm'
+                href={liveUrl}
+                target='_blank'
+                rel='noopener noreferrer'
+                aria-label={`View ${title} live demo`}
+              >
+                <FaExternalLinkAlt className='w-4 h-4' />
+              </a>
+            )}
+          </div>
+        </div>
+
+        <div className='p-6 flex flex-col flex-grow'>
+          <div className='flex-grow'>
+            <h3 className='text-xl font-semibold text-gray-900 dark:text-white mb-3 line-clamp-2 group-hover:text-gray-700 dark:group-hover:text-gray-200 transition-colors'>
+              {title}
+            </h3>
+            <p className='text-gray-600 dark:text-white/70 leading-relaxed text-sm line-clamp-3 mb-4'>
+              {description}
+            </p>
+          </div>
+
+          <div className='flex flex-wrap gap-2 mt-auto'>
             {tags.map((tag, index) => (
-              <li
-                className='bg-black/[0.7] px-3 py-1 text-[0.7rem] uppercase tracking-wider text-white rounded-full dark:text-white/70'
+              <span
                 key={index}
+                className='inline-flex items-center px-2.5 py-1 text-xs font-medium bg-gray-900 text-white rounded-full dark:bg-white/20 dark:text-white/90 transition-colors hover:bg-gray-800 dark:hover:bg-white/30'
               >
                 {tag}
-              </li>
+              </span>
             ))}
-          </ul>
-          <div className='flex gap-2 mt-4'>
-            {githubUrl ? (
+          </div>
+
+          <div className='flex gap-3 mt-4 sm:hidden'>
+            {githubUrl && (
               <a
-                className='bg-white p-2 text-gray-700 hover:text-gray-950 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer border border-black/10 shadow-sm dark:bg-white/10 dark:text-white/60 dark:border-white/20 dark:hover:bg-white/20'
+                className='flex-1 bg-gray-900 hover:bg-gray-800 text-white text-center py-2.5 px-4 rounded-lg font-medium transition-colors dark:bg-white/20 dark:hover:bg-white/30 dark:text-white'
                 href={githubUrl}
                 target='_blank'
                 rel='noopener noreferrer'
               >
-                <FaGithubSquare />
+                <span className='flex items-center justify-center gap-2'>
+                  <FaGithubSquare className='w-4 h-4' />
+                  Code
+                </span>
               </a>
-            ) : null}
-            {liveUrl ? (
+            )}
+            {liveUrl && (
               <a
-                className='bg-white p-2 text-gray-700 hover:text-gray-950 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer border border-black/10 shadow-sm dark:bg-white/10 dark:text-white/60 dark:border-white/20 dark:hover:bg-white/20'
+                className='flex-1 bg-gray-100 hover:bg-gray-200 text-gray-900 text-center py-2.5 px-4 rounded-lg font-medium transition-colors border border-gray-300 dark:bg-white/10 dark:hover:bg-white/20 dark:text-white dark:border-white/20'
                 href={liveUrl}
                 target='_blank'
                 rel='noopener noreferrer'
               >
-                <FaExternalLinkAlt />
+                <span className='flex items-center justify-center gap-2'>
+                  <FaExternalLinkAlt className='w-4 h-4' />
+                  Demo
+                </span>
               </a>
-            ) : null}
+            )}
           </div>
         </div>
-
-        <Image
-          src={image}
-          alt='Project I worked on'
-          quality={95}
-          width={400}
-          height={300}
-          className='absolute hidden sm:block top-8 -right-40 w-[28.25rem] rounded-t-lg shadow-2xl
-          transition 
-          group-hover:scale-[1.04]
-          group-hover:-translate-x-3
-          group-hover:translate-y-3
-          group-hover:-rotate-2
-
-          group-even:group-hover:translate-x-3
-          group-even:group-hover:translate-y-3
-          group-even:group-hover:rotate-2
-
-          group-even:right-[initial] group-even:-left-40'
-        />
-      </section>
+      </div>
     </motion.div>
   );
 };

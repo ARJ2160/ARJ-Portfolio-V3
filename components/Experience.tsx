@@ -5,7 +5,7 @@ import { SectionHeading } from './SectionHeading';
 import { experiencesData } from '@/lib/data';
 import { motion } from 'framer-motion';
 
-export const Experience = (): JSX.Element => {
+export const Experience = (): React.ReactElement => {
   return (
     <section id='experience' className='scroll-mt-28 mb-28 sm:mb-40'>
       <SectionHeading>My experience</SectionHeading>

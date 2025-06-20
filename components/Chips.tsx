@@ -1,4 +1,4 @@
-import React, { type JSX, type ReactNode } from 'react';
+import React, { type ReactNode } from 'react';
 import { twMerge } from 'tailwind-merge';
 
 interface IChips {
@@ -6,7 +6,7 @@ interface IChips {
   classNames: string;
 }
 
-export const Chips = ({ children, classNames }: IChips): JSX.Element => {
+export const Chips = ({ children, classNames }: IChips): React.ReactElement => {
   return (
     <div
       className={twMerge(

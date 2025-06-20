@@ -14,33 +14,34 @@ export const ThemeContextProvider = ({
 }: ThemeContextProviderProps) => {
   const [theme, setTheme] = useState<Theme>('light');
 
-  // Initialize theme from localStorage on mount
-  useEffect(() => {
-    const localTheme = window.localStorage.getItem('theme') as Theme | null;
+  const colorTheme = theme === 'dark' ? 'light' : 'dark';
 
-    if (localTheme) {
-      setTheme(localTheme);
-      if (localTheme === 'dark') {
-        document.documentElement.classList.add('dark');
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      if (localStorage.theme) {
+        setTheme(localStorage.theme as Theme);
+      } else if (
+        window.matchMedia &&
+        window.matchMedia('(prefers-color-scheme: dark)').matches
+      ) {
+        setTheme('dark');
+      } else {
+        setTheme('light');
       }
-    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-      setTheme('dark');
-      document.documentElement.classList.add('dark');
     }
   }, []);
 
-  // Simple toggle function to switch states
-  const toggleTheme = () => {
-    console.log('toggleTheme', theme);
-    if (theme === 'light') {
-      setTheme('dark');
-      window.localStorage.setItem('theme', 'dark');
-      document.documentElement.classList.add('dark');
-    } else {
-      setTheme('light');
-      window.localStorage.setItem('theme', 'light');
-      document.documentElement.classList.remove('dark');
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const root = window.document.documentElement;
+      localStorage.setItem('theme', theme);
+      root.classList.remove(colorTheme);
+      root.classList.add(theme);
     }
+  }, [theme, colorTheme]);
+
+  const toggleTheme = () => {
+    setTheme(prevTheme => (prevTheme === 'light' ? 'dark' : 'light'));
   };
 
   return (
