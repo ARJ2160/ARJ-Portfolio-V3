@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import React, { JSX } from 'react';
+import React, { type JSX } from 'react';
 
 import ARJLogo from '../public/arjLogo.png';
 

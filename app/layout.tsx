@@ -3,8 +3,8 @@ import '../styles/globals.css';
 import { Analytics } from '@vercel/analytics/next';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import type { Metadata, Viewport } from 'next';
+import type { JSX } from 'react';
 import React from 'react';
-import { JSX } from 'react';
 
 import { ThemeContextProvider } from '@/context/theme';
 

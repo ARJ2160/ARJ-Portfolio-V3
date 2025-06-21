@@ -20,7 +20,7 @@ export const Contact = (): React.ReactElement => {
 
     try {
       emailjs.init({
-        publicKey: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
+        publicKey: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY ?? ''
       });
       const result = await emailjs.sendForm(
         process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID ?? '',

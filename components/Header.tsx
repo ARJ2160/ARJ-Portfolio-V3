@@ -25,7 +25,7 @@ export const Header = (): React.ReactElement => {
               animate={{ y: 0, opacity: 1 }}
             >
               <Link
-                className='flex w-full items-center justify-center rounded-full px-3 py-3 transition hover:bg-gray-200/50 hover:text-gray-950 dark:text-gray-500 dark:hover:bg-white/10 dark:hover:text-gray-300'
+                className='flex w-full items-center justify-center rounded-full px-3 py-3 transition hover:bg-gray-200/50 hover:text-gray-950 dark:text-gray-300 dark:hover:bg-white/10 dark:hover:text-gray-300'
                 href={link.hash}
               >
                 {link.name}

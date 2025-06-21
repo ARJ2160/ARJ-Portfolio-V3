@@ -11,5 +11,4 @@ export { SectionDivider } from './SectionDivider';
 export { SectionHeading } from './SectionHeading';
 export { Skills } from './Skills';
 export { SocialMedia } from './SocialMedia';
-export { SplitText } from './SplitText';
 export { ThemeSwitch } from './ThemeSwitch';

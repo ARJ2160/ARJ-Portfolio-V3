@@ -1,17 +1,68 @@
-'use client';
-
+import dynamic from 'next/dynamic';
 import React from 'react';
 
-import { About } from '../components/About';
-import { Contact } from '../components/Contact';
-import { Experience } from '../components/Experience';
-import { Footer } from '../components/Footer';
 import { Header } from '../components/Header';
 import { Hero } from '../components/Hero';
-import { Projects } from '../components/Projects';
 import { SectionDivider } from '../components/SectionDivider';
-import { Skills } from '../components/Skills';
 import { ThemeSwitch } from '../components/ThemeSwitch';
+
+const About = dynamic(
+  () => import('../components/About').then(mod => ({ default: mod.About })),
+  {
+    loading: () => (
+      <div className='h-96 animate-pulse rounded-lg bg-gray-200 dark:bg-gray-800' />
+    )
+  }
+);
+
+const Projects = dynamic(
+  () =>
+    import('../components/Projects').then(mod => ({ default: mod.Projects })),
+  {
+    loading: () => (
+      <div className='h-96 animate-pulse rounded-lg bg-gray-200 dark:bg-gray-800' />
+    )
+  }
+);
+
+const Skills = dynamic(
+  () => import('../components/Skills').then(mod => ({ default: mod.Skills })),
+  {
+    loading: () => (
+      <div className='h-64 animate-pulse rounded-lg bg-gray-200 dark:bg-gray-800' />
+    )
+  }
+);
+
+const Experience = dynamic(
+  () =>
+    import('../components/Experience').then(mod => ({
+      default: mod.Experience
+    })),
+  {
+    loading: () => (
+      <div className='h-96 animate-pulse rounded-lg bg-gray-200 dark:bg-gray-800' />
+    )
+  }
+);
+
+const Contact = dynamic(
+  () => import('../components/Contact').then(mod => ({ default: mod.Contact })),
+  {
+    loading: () => (
+      <div className='h-64 animate-pulse rounded-lg bg-gray-200 dark:bg-gray-800' />
+    )
+  }
+);
+
+const Footer = dynamic(
+  () => import('../components/Footer').then(mod => ({ default: mod.Footer })),
+  {
+    loading: () => (
+      <div className='h-32 animate-pulse rounded-lg bg-gray-200 dark:bg-gray-800' />
+    )
+  }
+);
 
 export default function Home(): React.ReactElement {
   return (
