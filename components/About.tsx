@@ -22,7 +22,7 @@ export const About = (): React.ReactElement => {
         been diving into System Design to level up as a full-stack engineer.
         Technologies I work with regularly:{' '}
         <span className='font-medium'>
-          React & TypeScript, Storybook, Cypress, JavaScript, Node.js, MongoDB
+          React, TypeScript, Storybook, Node.js, MongoDB
         </span>
       </div>
     </motion.section>

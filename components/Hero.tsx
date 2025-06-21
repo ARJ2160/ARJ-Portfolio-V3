@@ -47,7 +47,7 @@ export const Hero = (): React.ReactElement => {
       >
         <span className='font-bold'>Hey there! I'm Atharva 👋.</span> A{' '}
         <span className='font-bold text-blue-600 dark:text-blue-400'>
-          full-stack wizard
+          full-stack dev
         </span>{' '}
         who turns ideas into digital reality. <br />I craft seamless web
         experiences with the{' '}
@@ -56,7 +56,7 @@ export const Hero = (): React.ReactElement => {
         </span>
         , specializing in{' '}
         <span className='underline decoration-wavy decoration-blue-500'>
-          React & Next.js magic
+          React & Next.js
         </span>{' '}
         ✨
       </motion.h1>
