@@ -6,5 +6,14 @@
   "singleQuote": true,
   "jsxSingleQuote": true,
   "bracketSpacing": true,
-  "arrowParens": "avoid"
+  "arrowParens": "avoid",
+  "bracketSameLine": false,
+  "htmlWhitespaceSensitivity": "css",
+  "insertPragma": false,
+  "plugins": ["prettier-plugin-tailwindcss"],
+  "proseWrap": "always",
+  "quoteProps": "as-needed",
+  "requirePragma": false,
+  "semi": true,
+  "useTabs": false
 }

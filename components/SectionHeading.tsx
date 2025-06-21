@@ -8,7 +8,7 @@ export const SectionHeading = ({
   children
 }: SectionHeadingProps): React.ReactElement => {
   return (
-    <h2 className='text-6xl font-medium capitalize mb-8 text-center'>
+    <h2 className='mb-8 text-center text-6xl font-medium capitalize'>
       {children}
     </h2>
   );

@@ -1,35 +1,37 @@
 import React from 'react';
 import { FaReact } from 'react-icons/fa';
-import type { Project, Experience, Skill } from '@/types/types';
+
+import type { Experience, Project, Skill } from '@/types/types';
+
 import {
-  ReactIcon,
-  NEXTJS,
-  Typescript,
-  Javascript,
-  Node,
-  Express,
-  Redux,
-  Framer,
-  MongoDB,
-  MaterialUI,
-  Tailwind,
-  HTML5,
-  CSS3,
-  GitHub,
-  Docker,
-  Zustand,
-  Bootstrap,
-  GraphQL,
   Apollo,
-  Storybook,
-  Vite,
+  BlogWebsite,
+  Bootstrap,
+  CSS3,
+  Docker,
+  Express,
+  Framer,
+  GitHub,
+  GraphQL,
+  HTML5,
+  Javascript,
+  Lusion,
+  MaterialUI,
+  MiltonFramer,
   // Jenkins,
   // Stripe,
   MITScratchClone,
-  BlogWebsite,
-  MiltonFramer,
+  MongoDB,
+  NEXTJS,
+  Node,
+  ReactIcon,
+  Redux,
   Spotify,
-  Lusion
+  Storybook,
+  Tailwind,
+  Typescript,
+  Vite,
+  Zustand
 } from './images';
 
 export const links = [

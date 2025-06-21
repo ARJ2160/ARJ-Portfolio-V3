@@ -6,9 +6,11 @@ module.exports = {
   extends: [
     'eslint:recommended',
     'next',
-    'standard-with-typescript',
     'prettier',
-    'plugin:react/recommended'
+    'plugin:react/recommended',
+    'plugin:import/recommended',
+    'next/core-web-vitals',
+    'plugin:prettier/recommended'
   ],
   overrides: [
     {
@@ -25,9 +27,11 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module'
   },
-  plugins: ['react'],
+  plugins: ['react', 'simple-import-sort'],
   rules: {
     semi: [2, 'always'],
+    'simple-import-sort/exports': 'error',
+    'simple-import-sort/imports': 'error',
     'react/no-unescaped-entities': 0,
     'react/no-unknown-property': 0,
     'react/no-children-prop': 0,
@@ -37,6 +41,7 @@ module.exports = {
     '@typescript-eslint/strict-boolean-expressions': 0,
     '@typescript-eslint/no-confusing-void-expression': 0,
     '@typescript-eslint/explicit-function-return-type': 0,
-    'import/no-duplicates': 0
+    'import/no-duplicates': 0,
+    'import/no-named-as-default-member': 0
   }
 };

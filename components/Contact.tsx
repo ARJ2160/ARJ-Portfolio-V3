@@ -1,10 +1,11 @@
 'use client';
 
-import React, { useState } from 'react';
-import { SectionHeading } from './SectionHeading';
-import { motion } from 'framer-motion';
-import { FaPaperPlane } from 'react-icons/fa';
 import emailjs from '@emailjs/browser';
+import { motion } from 'framer-motion';
+import React, { useState } from 'react';
+import { FaPaperPlane } from 'react-icons/fa';
+
+import { SectionHeading } from './SectionHeading';
 
 export const Contact = (): React.ReactElement => {
   const [isLoading, setIsLoading] = useState(false);
@@ -53,7 +54,7 @@ export const Contact = (): React.ReactElement => {
   return (
     <motion.section
       id='contact'
-      className='mb-20 sm:mb-28 w-[min(100%,38rem)] text-center'
+      className='mb-20 w-[min(100%,38rem)] text-center sm:mb-28'
       initial={{
         opacity: 0
       }}
@@ -69,7 +70,7 @@ export const Contact = (): React.ReactElement => {
     >
       <SectionHeading>Contact me</SectionHeading>
 
-      <p className='text-gray-700 -mt-6 dark:text-white/80'>
+      <p className='-mt-6 text-gray-700 dark:text-white/80'>
         Please contact me directly at{' '}
         <a className='underline' href='mailto:atharvaj2160@gmail.com'>
           atharvaj2160@gmail.com
@@ -82,7 +83,7 @@ export const Contact = (): React.ReactElement => {
         onSubmit={handleSubmit}
       >
         <input
-          className='h-14 px-4 rounded-lg border border-black/10 dark:border-white/20 bg-white dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none shadow-sm focus:shadow-md dark:focus:shadow-lg'
+          className='h-14 rounded-lg border border-black/10 bg-white px-4 shadow-sm transition-all focus:shadow-md dark:border-white/20 dark:bg-white dark:bg-opacity-80 dark:outline-none dark:focus:bg-opacity-100 dark:focus:shadow-lg'
           name='senderEmail'
           type='email'
           required
@@ -91,7 +92,7 @@ export const Contact = (): React.ReactElement => {
           disabled={isLoading}
         />
         <input
-          className='h-14 mt-4 px-4 rounded-lg border border-black/10 dark:border-white/20 bg-white dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none shadow-sm focus:shadow-md dark:focus:shadow-lg'
+          className='mt-4 h-14 rounded-lg border border-black/10 bg-white px-4 shadow-sm transition-all focus:shadow-md dark:border-white/20 dark:bg-white dark:bg-opacity-80 dark:outline-none dark:focus:bg-opacity-100 dark:focus:shadow-lg'
           name='name'
           type='string'
           required
@@ -100,7 +101,7 @@ export const Contact = (): React.ReactElement => {
           disabled={isLoading}
         />
         <textarea
-          className='h-52 my-3 rounded-lg border border-black/10 dark:border-white/20 p-4 bg-white dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none shadow-sm focus:shadow-md dark:focus:shadow-lg resize-none'
+          className='my-3 h-52 resize-none rounded-lg border border-black/10 bg-white p-4 shadow-sm transition-all focus:shadow-md dark:border-white/20 dark:bg-white dark:bg-opacity-80 dark:outline-none dark:focus:bg-opacity-100 dark:focus:shadow-lg'
           name='message'
           placeholder='Your message'
           required
@@ -110,7 +111,7 @@ export const Contact = (): React.ReactElement => {
 
         {message.text && (
           <div
-            className={`mb-4 p-3 rounded-lg text-sm ${
+            className={`mb-4 rounded-lg p-3 text-sm ${
               message.type === 'success'
                 ? 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200'
                 : 'bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200'
@@ -120,21 +121,21 @@ export const Contact = (): React.ReactElement => {
           </div>
         )}
 
-        <div className='flex flex-col sm:flex-row gap-3 items-center justify-center'>
+        <div className='flex flex-col items-center justify-center gap-3 sm:flex-row'>
           <button
             type='submit'
             disabled={isLoading}
-            className='group flex items-center justify-center gap-2 h-[3rem] w-[8rem] bg-gray-900 text-white rounded-full outline-none transition-all focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 dark:bg-white dark:text-white dark:hover:text-white dark:bg-opacity-10 disabled:scale-100 disabled:bg-opacity-65 border border-black/10 dark:border-white/20 shadow-lg hover:shadow-xl dark:hover:shadow-2xl disabled:cursor-not-allowed'
+            className='group flex h-[3rem] w-[8rem] items-center justify-center gap-2 rounded-full border border-black/10 bg-gray-900 text-white shadow-lg outline-none transition-all hover:scale-110 hover:bg-gray-950 hover:shadow-xl focus:scale-110 active:scale-105 disabled:scale-100 disabled:cursor-not-allowed disabled:bg-opacity-65 dark:border-white/20 dark:bg-white dark:bg-opacity-10 dark:text-white dark:hover:text-white dark:hover:shadow-2xl'
           >
             {isLoading ? (
               <>
-                <div className='w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin'></div>
+                <div className='h-4 w-4 animate-spin rounded-full border-2 border-white border-t-transparent'></div>
                 Sending...
               </>
             ) : (
               <>
                 Submit{' '}
-                <FaPaperPlane className='text-xs opacity-70 transition-all group-hover:translate-x-1 group-hover:-translate-y-1' />
+                <FaPaperPlane className='text-xs opacity-70 transition-all group-hover:-translate-y-1 group-hover:translate-x-1' />
               </>
             )}
           </button>

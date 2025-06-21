@@ -1,32 +1,80 @@
-import { ThemeContextProvider } from '@/context/theme';
-import React from 'react';
 import '../styles/globals.css';
+
 import type { Metadata, Viewport } from 'next';
+import React from 'react';
 import { JSX } from 'react';
+
+import { ThemeContextProvider } from '@/context/theme';
 
 export const viewport: Viewport = {
   width: 'device-width',
-  initialScale: 1
+  initialScale: 1,
+  themeColor: [
+    { media: '(prefers-color-scheme: light)', color: '#ffffff' },
+    { media: '(prefers-color-scheme: dark)', color: '#0f172a' }
+  ]
 };
 
 export const metadata: Metadata = {
-  title: 'Atharva J | Portfolio Website V3',
-  description: 'Portfolio Website V3',
-  authors: { name: 'Atharva J' },
+  title: {
+    default: 'Atharva Joshi | Portfolio V3',
+    template: '%s | Atharva Joshi'
+  },
+  description:
+    'Full Stack Developer specializing in React, Next.js, Node.js, and modern web technologies. View my portfolio showcasing innovative projects and professional experience.',
+  authors: [{ name: 'Atharva Joshi', url: 'https://www.atharvaj.site/' }],
+  creator: 'Atharva Joshi',
+  publisher: 'Atharva Joshi',
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false
+  },
+  metadataBase: new URL('https://www.atharvaj.site/'),
+  alternates: {
+    canonical: '/'
+  },
   openGraph: {
-    url: 'https://www.atharvaj.online',
     type: 'website',
-    siteName: 'ARJs Portfolio V3',
-    title: 'ARJs Portfolio V3',
+    locale: 'en_US',
+    url: 'https://www.atharvaj.site/',
+    siteName: 'Atharva Joshi | Portfolio V3',
+    title: 'Atharva Joshi | Portfolio V3',
+    description:
+      'Full Stack Developer specializing in React, Next.js, Node.js, and modern web technologies. View my portfolio showcasing innovative projects and professional experience.',
     images: [
       {
-        url: 'https://ik.imagekit.io/36athv2v82c8/Screenshot_2022-12-18_125952_xWZQNyd3I.png?ik-sdk-version=javascript-1.4.3&updatedAt=1671348611035',
+        url: '/og-image.png', // You should add this image to your public folder
         width: 1200,
         height: 630,
-        alt: 'ARJs Portfolio V3'
+        alt: 'Atharva Joshi | Portfolio V3',
+        type: 'image/png'
       }
     ]
-  }
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Atharva Joshi | Full Stack Developer Portfolio',
+    description:
+      'Full Stack Developer specializing in React, Next.js, Node.js, and modern web technologies.',
+    images: ['/og-image.png'], // Same image as OpenGraph
+    creator: 'https://x.com/Atharvaj2160'
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1
+    }
+  },
+  icons: {
+    apple: [{ url: '/apple-touch-icon.png' }]
+  },
+  manifest: '/manifest.json'
 };
 
 export default function RootLayout({
@@ -39,8 +87,8 @@ export default function RootLayout({
       <body
         className={`bg-gray-50 text-gray-950 dark:bg-gray-900 dark:text-gray-50 dark:text-opacity-90`}
       >
-        <div className='bg-[#fbe2e3] absolute top-[-6rem] -z-10 right-[11rem] h-[31.25rem] w-[31.25rem] rounded-full blur-[10rem] sm:w-[68.75rem] dark:bg-[#946263]'></div>
-        <div className='bg-[#dbd7fb] absolute top-[-1rem] -z-10 left-[-35rem] h-[31.25rem] w-[50rem] rounded-full blur-[10rem] sm:w-[68.75rem] md:left-[-33rem] lg:left-[-28rem] xl:left-[-15rem] 2xl:left-[-5rem] dark:bg-[#676394]'></div>
+        <div className='absolute right-[11rem] top-[-6rem] -z-10 h-[31.25rem] w-[31.25rem] rounded-full bg-[#fbe2e3] blur-[10rem] dark:bg-[#946263] sm:w-[68.75rem]'></div>
+        <div className='absolute left-[-35rem] top-[-1rem] -z-10 h-[31.25rem] w-[50rem] rounded-full bg-[#dbd7fb] blur-[10rem] dark:bg-[#676394] sm:w-[68.75rem] md:left-[-33rem] lg:left-[-28rem] xl:left-[-15rem] 2xl:left-[-5rem]'></div>
         <ThemeContextProvider>{children}</ThemeContextProvider>
       </body>
     </html>

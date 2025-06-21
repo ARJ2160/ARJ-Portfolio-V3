@@ -1,10 +1,12 @@
 'use client';
 
-import React from 'react';
-import { SectionHeading } from './SectionHeading';
-import { skillsData } from '@/lib/data';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import React from 'react';
+
+import { skillsData } from '@/lib/data';
+
+import { SectionHeading } from './SectionHeading';
 
 const fadeInAnimationVariants = {
   initial: {
@@ -30,7 +32,7 @@ export const Skills = (): React.ReactElement => {
       <ul className='flex flex-wrap justify-center gap-2 text-lg text-gray-800'>
         {skillsData.map(({ name, icon }, index) => (
           <motion.li
-            className='bg-white border border-black/10 rounded-xl px-5 py-3 dark:bg-white/10 dark:text-white/80 dark:border-white/20 flex items-center gap-2 shadow-sm dark:shadow-md hover:shadow-md dark:hover:shadow-lg transition-shadow'
+            className='flex items-center gap-2 rounded-xl border border-black/10 bg-white px-5 py-3 shadow-sm transition-shadow hover:shadow-md dark:border-white/20 dark:bg-white/10 dark:text-white/80 dark:shadow-md dark:hover:shadow-lg'
             key={index}
             variants={fadeInAnimationVariants}
             initial='initial'

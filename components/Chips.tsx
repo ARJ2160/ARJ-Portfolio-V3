@@ -10,7 +10,7 @@ export const Chips = ({ children, classNames }: IChips): React.ReactElement => {
   return (
     <div
       className={twMerge(
-        'flex w-fit py-3 px-6 relative overflow-visible h-fit flex-nowrap text-sm leading-[100%] font-medium rounded-full',
+        'relative flex h-fit w-fit flex-nowrap overflow-visible rounded-full px-6 py-3 text-sm font-medium leading-[100%]',
         classNames
       )}
     >
