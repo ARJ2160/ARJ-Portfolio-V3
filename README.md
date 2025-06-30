@@ -1,48 +1,84 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with
-[`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🚀 Atharva Joshi - Portfolio Website V3
 
-## Getting Started
+The third iteration of my portfolio website built with Next.js 15, showcasing my
+projects, skills, and professional experience as a Full Stack Developer.
 
-First, run the development server:
+![Portfolio Preview](./public/logo.png)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## 🌟 Features
+
+- **Modern Design**: Clean, minimalist interface with smooth animations
+- **Responsive Layout**: Optimized for all device sizes and screen resolutions
+- **Dark/Light Mode**: Toggle between themes with persistent user preference
+- **Interactive Animations**: Smooth transitions and micro-interactions using
+  Framer Motion
+- **Contact Form**: Functional contact form with EmailJS integration
+- **Performance Optimized**: Built with Next.js 15 for optimal loading speeds
+- **SEO Friendly**: Proper meta tags and structured data for better search
+  visibility
+- **Accessibility**: WCAG compliant with proper semantic HTML and ARIA labels
+
+## 🛠️ Tech Stack
+
+### Frontend
+
+- **Next.js 15**
+- **React 18**
+- **TypeScript**
+- **Tailwind CSS**
+- **Framer Motion**
+
+### Tools & Libraries
+
+- **EmailJS**
+- **React Icons**
+- **GSAP**
+- **Vercel Analytics**
+- **ESLint & Prettier**
+- **Husky**
+
+## 📁 Project Structure
+
+```
+ARJ-Portfolio-V3/
+├── app/                    # Next.js App Router
+│   ├── layout.tsx         # Root layout
+│   └── page.tsx           # Home page
+├── components/            # React components
+│   ├── About.tsx         # About section
+│   ├── Contact.tsx       # Contact form
+│   ├── Experience.tsx    # Work experience
+│   ├── Hero.tsx          # Hero section
+│   ├── Projects.tsx      # Projects showcase
+│   ├── Skills.tsx        # Skills display
+│   └── ui/               # Reusable UI components
+├── assets/               # Static assets
+│   ├── projects/         # Project images
+│   └── skills/           # Technology icons
+├── lib/                  # Utility functions and data
+├── styles/               # Global styles and fonts
+├── context/              # React context providers
+└── types/                # TypeScript type definitions
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the
-result.
+## 🔧 Available Scripts
 
-You can start editing the page by modifying `app/page.tsx`. The page
-auto-updates as you edit the file.
+- `bun dev` - Start development server with Turbo
+- `bun build` - Build for production
+- `bun start` - Start production server
+- `bun lint` - Run ESLint
+- `bun lint:fix` - Fix ESLint errors
+- `bun format` - Format code with Prettier
+- `bun check-types` - Run TypeScript type checking
+- `bun clean` - Clean build files and reinstall dependencies
 
-This project uses
-[`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to
-automatically optimize and load Inter, a custom Google Font.
+## 👨‍💻 About the Developer
 
-## Learn More
+I am **Atharva Joshi**
 
-To learn more about Next.js, take a look at the following resources:
+- 📧 Email: [atharvaj2160@gmail.com](mailto:atharvaj2160@gmail.com)
+- 🌐 Portfolio: [https://www.atharvaj.site/]
+- 💼 LinkedIn: [https://www.linkedin.com/in/arj2160/]
+- 🐙 GitHub: [https://github.com/ARJ2160]
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js
-  features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out
-[the Next.js GitHub repository](https://github.com/vercel/next.js/) - your
-feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the
-[Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme)
-from the creators of Next.js.
-
-Check out our
-[Next.js deployment documentation](https://nextjs.org/docs/deployment) for more
-details.
+_Built with ❤️ using Next.js and TypeScript_
