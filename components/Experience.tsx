@@ -24,7 +24,6 @@ export const Experience = (): React.ReactElement => {
               viewport={{ once: true }}
             >
               <div className='rounded-xl border border-black/5 bg-white p-6 shadow-lg backdrop-blur-sm transition-all duration-300 hover:shadow-xl dark:border-white/10 dark:bg-white/10 dark:hover:shadow-2xl'>
-                {/* Company header */}
                 <div className='mb-4 flex items-center gap-3'>
                   <div className='rounded-lg bg-gradient-to-br from-blue-50 to-indigo-100 p-2 text-3xl dark:from-blue-900/20 dark:to-indigo-900/20'>
                     {item.icon}
@@ -50,9 +49,9 @@ export const Experience = (): React.ReactElement => {
                 </div>
 
                 {/* Description */}
-                <p className='leading-relaxed text-gray-700 dark:text-white/70'>
+                {/* <p className='leading-relaxed text-gray-700 dark:text-white/70'>
                   {item.description}
-                </p>
+                </p> */}
               </div>
             </motion.div>
           ))}
