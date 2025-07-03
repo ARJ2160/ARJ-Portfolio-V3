@@ -88,25 +88,27 @@ export const Hero = (): React.ReactElement => {
           <FaExternalLinkAlt className='opacity-60 transition group-hover:translate-y-1' />
         </a>
 
-        <a
-          className='flex cursor-pointer items-center gap-2 rounded-full border border-black/10 bg-white p-4 text-gray-700 shadow-lg transition hover:scale-[1.15] hover:text-gray-950 hover:shadow-xl focus:scale-[1.15] active:scale-105 dark:border-white/20 dark:bg-white/10 dark:text-white/60 dark:hover:shadow-2xl'
-          href='https://www.linkedin.com/in/arj2160/'
-          target='_blank'
-          rel='noreferrer'
-          aria-label='Visit my LinkedIn profile'
-        >
-          <BsLinkedin />
-        </a>
+        <div className='flex items-center justify-center gap-2'>
+          <a
+            className='flex cursor-pointer items-center gap-2 rounded-full border border-black/10 bg-white p-4 text-gray-700 shadow-lg transition hover:scale-[1.15] hover:text-gray-950 hover:shadow-xl focus:scale-[1.15] active:scale-105 dark:border-white/20 dark:bg-white/10 dark:text-white/60 dark:hover:shadow-2xl'
+            href='https://www.linkedin.com/in/arj2160/'
+            target='_blank'
+            rel='noreferrer'
+            aria-label='Visit my LinkedIn profile'
+          >
+            <BsLinkedin />
+          </a>
 
-        <a
-          className='flex cursor-pointer items-center gap-2 rounded-full border border-black/10 bg-white p-4 text-[1.35rem] text-gray-700 shadow-lg transition hover:scale-[1.15] hover:text-gray-950 hover:shadow-xl focus:scale-[1.15] active:scale-105 dark:border-white/20 dark:bg-white/10 dark:text-white/60 dark:hover:shadow-2xl'
-          href='https://github.com/ARJ2160'
-          target='_blank'
-          rel='noreferrer'
-          aria-label='Visit my GitHub profile'
-        >
-          <FaGithubSquare />
-        </a>
+          <a
+            className='flex cursor-pointer items-center gap-2 rounded-full border border-black/10 bg-white p-4 text-[1.35rem] text-gray-700 shadow-lg transition hover:scale-[1.15] hover:text-gray-950 hover:shadow-xl focus:scale-[1.15] active:scale-105 dark:border-white/20 dark:bg-white/10 dark:text-white/60 dark:hover:shadow-2xl'
+            href='https://github.com/ARJ2160'
+            target='_blank'
+            rel='noreferrer'
+            aria-label='Visit my GitHub profile'
+          >
+            <FaGithubSquare />
+          </a>
+        </div>
       </motion.div>
     </section>
   );

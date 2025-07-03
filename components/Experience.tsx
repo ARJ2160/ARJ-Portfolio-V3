@@ -29,10 +29,10 @@ export const Experience = (): React.ReactElement => {
                     {item.icon}
                   </div>
                   <div>
-                    <h3 className='text-xl font-bold text-gray-900 dark:text-white'>
+                    <h3 className='text-2xl text-gray-900 dark:text-white'>
                       {item.company}
                     </h3>
-                    <p className='text-sm text-gray-500 dark:text-gray-400'>
+                    <p className='text-md text-gray-500 dark:text-gray-400'>
                       {item.location}
                     </p>
                   </div>
@@ -40,10 +40,10 @@ export const Experience = (): React.ReactElement => {
 
                 {/* Position and date */}
                 <div className='mb-4'>
-                  <h4 className='mb-1 text-lg font-semibold text-gray-800 dark:text-white/90'>
+                  <h4 className='mb-1 text-lg text-gray-800 dark:text-white/90'>
                     {item.designation}
                   </h4>
-                  <p className='inline-block rounded-full bg-blue-50 px-3 py-1 text-sm font-medium text-blue-600 dark:bg-blue-900/20 dark:text-blue-400'>
+                  <p className='font-sm inline-block rounded-full bg-blue-50 px-3 py-1 text-sm text-blue-600 dark:bg-blue-900/20 dark:text-blue-400'>
                     {item.date}
                   </p>
                 </div>

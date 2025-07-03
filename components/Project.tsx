@@ -7,6 +7,8 @@ import { FaExternalLinkAlt, FaGithubSquare } from 'react-icons/fa';
 
 import type { Project as ProjectType } from '@/types/types';
 
+import { Chips } from './Chips';
+
 export const Project = ({
   title,
   description,
@@ -73,21 +75,23 @@ export const Project = ({
 
         <div className='flex flex-grow flex-col p-6'>
           <div className='flex-grow'>
-            <div className='mb-3 line-clamp-2 text-xl font-bold text-slate-900 transition-colors group-hover:text-gray-700 dark:text-white dark:group-hover:text-gray-200'>
+            <div className='mb-3 line-clamp-2 text-2xl font-medium text-slate-900 transition-colors group-hover:text-gray-700 dark:text-white dark:group-hover:text-gray-200'>
               {title}
             </div>
-            <p className='mb-4 line-clamp-3 text-sm leading-relaxed text-gray-600 dark:text-white/70'>
+            <p className='text-md mb-4 line-clamp-3 leading-relaxed text-gray-600 dark:text-white/70'>
               {description}
             </p>
           </div>
 
           <div className='mt-auto flex flex-wrap gap-2'>
             {tags.map((tag, index) => (
-              <span
-                key={index}
-                className='inline-flex items-center rounded-full bg-gray-900 px-2.5 py-1 text-xs font-medium text-white transition-colors hover:bg-gray-800 dark:bg-white/20 dark:text-white/90 dark:hover:bg-white/30'
-              >
-                {tag}
+              <span key={index}>
+                <Chips
+                  key={index}
+                  classNames='inline-flex items-center rounded-full bg-gray-900 px-2.5 py-1 text-sm text-white transition-colors hover:bg-gray-800 dark:bg-white/20 dark:text-white/90 dark:hover:bg-white/30'
+                >
+                  {tag}
+                </Chips>
               </span>
             ))}
           </div>
