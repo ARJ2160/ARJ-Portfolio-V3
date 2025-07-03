@@ -65,11 +65,20 @@ export const experiencesData: Experience[] = [
   {
     company: 'Apptware',
     location: 'Pune, India',
+    designation: 'Associate Software Engineer',
+    description:
+      'Developed full-stack web applications using MongoDB, Express.js, React, and Node.js. Built responsive user interfaces and RESTful APIs.',
+    icon: React.createElement(FaReact),
+    date: `April 2025 - present  (${new Date().getFullYear() - 2024}  months)`
+  },
+  {
+    company: 'Apptware',
+    location: 'Pune, India',
     designation: 'Associate React (MERN) Developer',
     description:
       'Developed full-stack web applications using MongoDB, Express.js, React, and Node.js. Built responsive user interfaces and RESTful APIs.',
     icon: React.createElement(FaReact),
-    date: `February 2022 - present  (${new Date().getFullYear() - 2022}  Years)`
+    date: `February 2022 - present  (${new Date().getFullYear() - new Date('2022-02-01').getFullYear()}  Years)`
   },
   {
     company: 'Quantum Hunts',
