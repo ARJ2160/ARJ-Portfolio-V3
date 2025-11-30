@@ -69,7 +69,7 @@ export const experiencesData: Experience[] = [
     description:
       'Developed full-stack web applications using MongoDB, Express.js, React, and Node.js. Built responsive user interfaces and RESTful APIs.',
     icon: React.createElement(FaReact),
-    date: `April 2025 - present  (${new Date().getFullYear() - 2024}  months)`
+    date: `April 2025 - present  (${new Date().getMonth() - 3}  months)`
   },
   {
     company: 'Apptware',
